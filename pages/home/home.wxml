@@ -1,2 +1,54 @@
 <!--pages/home/home.wxml-->
 <text>pages/home/home.wxml</text>
+
+<input type="text" confirm-type="next" placeholder="输入点啥" /> 
+<scroll-view class="contarner" scroll-x>
+  <view wx:for="{{10}}" wx:key="item">{{item}}</view>
+</scroll-view>
+
+
+<button type="primary" size="mini" bindtap="btnClick">按钮</button>
+<view>
+  <text>现在的时间是：{{nowTime}}</text>
+</view>
+<view class="box {{ active ? 'active' : ''}}"></view>
+<button type="warn" size="mini" bindtap="activeBox">激活</button>
+
+<input type="text" placeholder="分数" bindblur="getScore"/>
+<view>
+  <text wx:if="{{score > 90}}">优秀</text>
+  <text wx:elif="{{score > 80}}">良好</text>
+  <text wx:elif="{{score > 70}}">一般</text>
+  <text wx:elif="{{score > 60}}">及格</text>
+  <text wx:else>不及格</text>
+</view>
+<view>------------template模板--------------</view>
+<template name="templateDemo">
+  <button size="mini">{{btnText}}</button>
+  <text>{{content}}</text>
+</template>
+
+<template is="templateDemo" data="{{btnText: 'ninn',content: 'budong'}}" />
+<template is="templateDemo" data="{{btnText: 'ninn',content: 'budong'}}" />
+<template is="templateDemo" data="{{btnText: 'ninn',content: 'budong'}}" />
+<template is="templateDemo" data="{{btnText: 'ninn',content: 'budong'}}" />
+<wxs src="../../wxs/format.wxs" module="format"></wxs>
+<view>
+  {{ format.priceFormat(26.666666, 2)}}
+</view>
+<view>
+  {{ format.dateFormat(1560598160)}}
+</view>
+<view>------时间传参数---------</view>
+<view style="display:flex">
+  <text wx:for="{{movies}}" style="flex:1" catchtap="moviesClick" data-index="{{index}}" data-item="{{item}}" wx:key="item">{{item}}</text>
+</view>
+
+<my-cpn foo="{{['heiheihei','hahahah','xixixxi']}}" titleclass="red"></my-cpn>
+<my-cpn foo="{{['heiheihei','hahahah','xixixxi']}}" titleclass="yellow"></my-cpn>
+<my-cpn foo="{{['heiheihei','hahahah','xixixxi']}}" titleclass="blue"></my-cpn>
+
+<view>
+  当前计数：{{counter}}
+</view>
+<mye catch:increament="increament"></mye>

@@ -1,0 +1,7 @@
+<!--components/tabbar/tabbar.wxml-->
+<view class="tabbar" wx:if="{{ list.length > 0 }}">
+  <view wx:for="{{list}}" wx:key="item" class="tabbar-item" catchtap="choose" data-ind="{{index}}">
+    <text class="text {{currentItem === index ? 'active' : ''}}">{{item}}</text>
+  </view>
+  
+</view>

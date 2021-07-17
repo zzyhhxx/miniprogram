@@ -1,11 +1,11 @@
-// pages/cart/cart.js
+// pages/comment/comment.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    title:'哈哈哈'
+
   },
 
   /**
@@ -62,11 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  toDetail() {
-    wx.navigateTo({
-      url: '/pages/detail/detail',
-    })
   }
 })

@@ -1,0 +1,17 @@
+<view>
+  <view>
+    <text>开始</text>
+  </view>
+  <view class="slot1">
+    <slot name="slot1"></slot>
+  </view>
+  <view class="slot2">
+    <slot name="slot2"></slot>
+  </view>
+  <view class="slot3">
+    <slot name="slot3"></slot>
+  </view>
+  <view>
+    <text>结尾</text>
+  </view>
+</view>

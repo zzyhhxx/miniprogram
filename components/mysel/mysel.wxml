@@ -1,0 +1,4 @@
+<!--components/mysel/mysel.wxml-->
+<view>
+  计数：{{counter}}
+</view>

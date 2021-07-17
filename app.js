@@ -10,10 +10,34 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        // code只有五分钟有效
+        // console.log(res)
+        console.log(wx.getStorageSync('log'))
       }
     })
   },
   globalData: {
     userInfo: null
+  },
+  __get(url, data, callBack) {
+    wx.request({
+      url,
+      header:{
+        'content-type': 'application/json'
+      },
+      method:'GET',
+      data,
+      success(res){
+        callBack(res)
+      },
+      fail() {
+        throw new Error("网络请求失败")
+      },
+      complete() {
+      }
+    })
+  },
+  __post() {
+
   }
 })

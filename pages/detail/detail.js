@@ -1,18 +1,18 @@
-// pages/cart/cart.js
+// pages/detail/detail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    title:'哈哈哈'
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options)
   },
 
   /**
@@ -40,7 +40,12 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    //获取当前活跃页面
+    const currentPages = getCurrentPages()
+    //改变页面数据
+    currentPages[currentPages.length - 2].setData({
+      title:'嘿嘿嘿'
+    })
   },
 
   /**
@@ -63,10 +68,9 @@ Page({
   onShareAppMessage: function () {
 
   },
-
-  toDetail() {
-    wx.navigateTo({
-      url: '/pages/detail/detail',
+  back() {
+    wx.navigateBack({
+      delta: 0,
     })
   }
 })

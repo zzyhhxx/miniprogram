@@ -1,0 +1,6 @@
+<!--components/mycpn/mycpn.wxml-->
+<text>{{text}}</text>
+<button catchtap="btnClick">点我</button>
+<view class="content">
+  <text wx:for="{{foo}}" wx:key="item" class="content-item titleclass">{{item}}---{{index}}</text>
+</view>

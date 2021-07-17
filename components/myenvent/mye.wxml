@@ -1,0 +1,2 @@
+<!--components/myenvent/mye.wxml-->
+<button size="mini" catchtap="increament">+1</button>

@@ -1,4 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "my-cpn":"/components/mycpn/mycpn",
+    "mye":"/components/myenvent/mye"
+  },
   "navigationBarTitleText": "小程序首页"
 }

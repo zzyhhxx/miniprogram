@@ -1,2 +1,16 @@
 <!--pages/category/category.wxml-->
-<text>pages/category/category.wxml</text>
+<tab-bar catch:choose="choose" list="{{['衣服','鞋子','裤子']}}"></tab-bar>
+<my-sel id="counter"></my-sel>
+<button catchtap="increament" >加加</button>
+<my-slot>
+  <button size="mini" slot="slot1">按牛牛牛</button>
+  <slider value="70" slot="slot2"></slider>
+  <text slot="slot3">hahhahah</text>
+</my-slot>
+
+<button catchtap="showToast">showToast</button>
+<button catchtap="showModel">showModel</button>
+<button catchtap="showLoading">showLoading</button>
+<button catchtap="hideLoading">hideLoading</button>
+<button catchtap="showActionSheet">showActionSheet</button>
+<button open-type="share">分享</button>

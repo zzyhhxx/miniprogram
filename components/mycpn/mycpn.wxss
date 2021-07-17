@@ -1,0 +1,8 @@
+/* components/mycpn/mycpn.wxss */
+.content {
+  display: flex;
+}
+.content-item {
+  flex: 1;
+  text-align: center;
+}

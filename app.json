@@ -3,21 +3,24 @@
     "pages/home/home",
     "pages/profile/profile",
     "pages/category/category",
-    "pages/cart/cart"
+    "pages/cart/cart",
+    "pages/detail/detail",
+    "pages/comment/comment"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ff5777",
     "navigationBarTitleText": "zzY的小程序",
     "navigationBarTextStyle": "white",
-    "enablePullDownRefresh": true,
+    "enablePullDownRefresh": false,
     "backgroundColor": "#ff5777"
   },
   "tabBar": {
     "color": "#000000",
     "selectedColor": "#ff5777",
     "backgroundColor": "#ffffff",
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/home/home",
         "text": "首页",
         "iconPath": "assets/tabbar/home.png",

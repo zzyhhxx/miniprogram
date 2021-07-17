@@ -5,14 +5,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    nowTime:"",
+    active:false,
+    score:0,
+    movies: ['海尔兄弟','海贼王','海上上海'],
+    counter:0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    setInterval(() => {
+      this.setData({
+        nowTime: new Date().toLocaleTimeString()
+      })
+    }, 1000);
   },
 
   /**
@@ -62,5 +70,28 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  btnClick() {
+    console.log("dianji")
+  },
+  activeBox() {
+    console.log("dianjidddd")
+    this.setData({
+      active:!this.data.active
+    })
+  },
+  getScore(e) {
+    this.setData({
+      score:e.detail.value
+    })
+  },
+  moviesClick(e) {
+    console.log(e.currentTarget.dataset.item)
+  },
+  increament(e) {
+    console.log(e)
+    this.setData({
+      counter:++this.data.counter
+    })
   }
 })

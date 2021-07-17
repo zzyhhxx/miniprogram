@@ -1,4 +1,8 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "tab-bar":"/components/tabbar/tabbar",
+    "my-sel":"/components/mysel/mysel",
+    "my-slot":"/components/myslot/myslot"
+  },
   "navigationBarTitleText": "商品分类"
 }
